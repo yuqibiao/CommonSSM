@@ -9,6 +9,13 @@
     <modules>
         <module>../crm-web</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.yyyu</groupId>
+            <artifactId>crm-dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <parent>
         <groupId>com.yyyu</groupId>
