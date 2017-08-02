@@ -61,6 +61,7 @@ public class CustomerController {
 
     @RequestMapping("/customer/list.action")
     public String listCustomer(CustomerQueryVo queryVo , Model model){
+        queryVo.setRows( (queryVo.getPage()-1)*(queryVo.getSize()));
         String result = "customer";
         List<BaseDict> fromType =  baseDictBiz.getBaseDictByTypeCode(fromTypeCode);
         List<BaseDict> industryType =  baseDictBiz.getBaseDictByTypeCode(industryTypeCode);

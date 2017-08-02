@@ -48,7 +48,7 @@ public class NavigationTag extends TagSupport {
             //显示“上一页”按钮
         	if (page.getPage() > 1) {
                 String preUrl = append(url, "page", page.getPage() - 1);
-                preUrl = append(preUrl, "rows", page.getSize());
+                preUrl = append(preUrl, "size", page.getSize());
                 writer.print("<li><a href=\"" + preUrl + "\">上一页</a></li>");
             } else {
             	writer.print("<li class=\"disabled\"><a href=\"#\">上一页</a></li>");
@@ -63,13 +63,13 @@ public class NavigationTag extends TagSupport {
                     continue;
                 }
                 String pageUrl  = append(url, "page", indexPage);
-                pageUrl = append(pageUrl, "rows", page.getSize());
+                pageUrl = append(pageUrl, "size", page.getSize());
                 writer.print("<li><a href=\"" + pageUrl + "\">"+ indexPage +"</a></li>");
             }
             //显示“下一页”按钮
             if (page.getPage() < pageCount) {
                 String nextUrl  = append(url, "page", page.getPage() + 1);
-                nextUrl = append(nextUrl, "rows", page.getSize());
+                nextUrl = append(nextUrl, "size", page.getSize());
                 writer.print("<li><a href=\"" + nextUrl + "\">下一页</a></li>");
             } else {
             	writer.print("<li class=\"disabled\"><a href=\"#\">下一页</a></li>");
@@ -124,7 +124,7 @@ public class NavigationTag extends TagSupport {
     	//UrlSupport.resolveUrl(url, context, pageContext)
     	Map params = pageContext.getRequest().getParameterMap();
     	for (Object key:params.keySet()) {
-    		if ("page".equals(key) || "rows".equals(key)) continue;
+    		if ("page".equals(key) || "size".equals(key)) continue;
     		Object value = params.get(key);
     		if (value == null) continue;
     		if (value.getClass().isArray()) {

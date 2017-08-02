@@ -214,6 +214,15 @@
                     <!-- 可以灵活配置端口号 -->
                     <port>8080</port>
                 </configuration>
+                <!-- 在打包的时候运行这个容器 -->
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
 
