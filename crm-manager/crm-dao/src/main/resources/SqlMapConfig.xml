@@ -15,7 +15,7 @@
     <typeAliases>
        <!-- <typeAlias type="com.yyyu.mybatis.pojo.User" alias="user"/>-->
         <!-- 批量别名定义，扫描整个包下的类，别名为类名（大小写不敏感） -->
-        <package name="com.yyyu.pojo"/>
+        <package name="com.yyyu.crm.pojo"/>
     </typeAliases>
 
 

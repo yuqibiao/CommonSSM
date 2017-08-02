@@ -8,17 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-utils" />
         <module name="crm-dao" />
+        <module name="crm-service" />
         <module name="crm-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="common-parent-ssm" target="1.7" />
-      <module name="common-utils" target="1.7" />
-      <module name="crm-dao" target="1.7" />
-      <module name="crm-dao (1)" target="1.7" />
-      <module name="crm-manager" target="1.7" />
-      <module name="crm-service" target="1.7" />
-      <module name="crm-web" target="1.7" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="common-parent-ssm" target="1.8" />
+      <module name="common-utils" target="1.5" />
+      <module name="crm-dao" target="1.8" />
+      <module name="crm-manager" target="1.8" />
+      <module name="crm-service" target="1.8" />
+      <module name="crm-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

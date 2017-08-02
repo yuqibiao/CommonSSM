@@ -7,23 +7,9 @@
     <name>crm-dao</name>
     <version>1.0-SNAPSHOT</version>
     <parent>
-        <artifactId>crm-manager</artifactId>
         <groupId>com.yyyu</groupId>
+        <artifactId>crm-manager</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <build>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-        </resources>
-    </build>
 
 </project>
