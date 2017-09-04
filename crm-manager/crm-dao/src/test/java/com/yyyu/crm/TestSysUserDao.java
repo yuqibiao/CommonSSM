@@ -1,6 +1,7 @@
 package com.yyyu.crm;
 
 import com.yyyu.crm.dao.SysUserMapper;
+import com.yyyu.crm.yu.SysUserMapper2;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class TestSysUserDao extends BaseTest{
 
     @Autowired
     private SysUserMapper sysUserMapper;
+    @Autowired
+    private SysUserMapper2 sysUserMapper2;
 
     @Override
     public void initTest() {
@@ -24,8 +27,14 @@ public class TestSysUserDao extends BaseTest{
     }
 
     @Test
-    public void testAddSysUser(){
-        sysUserMapper.getSysUserByUserId(15l);
+    public void testetSysUserByUserId(){
+        sysUserMapper.getSysUserByUserId(5l);
+    }
+
+
+    @Test
+    public void testetSysUserByUserId2(){
+        sysUserMapper2.getSysUserByUserId(1l);
     }
 
 }
